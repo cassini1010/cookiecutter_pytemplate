@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.project_name }}"
+authors = [
+    {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"},
+]
+description = "{{ cookiecutter.project_short_description }}"
+readme = "README.md"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "autoimport",
+]
+
+[project.scripts]
+{{ cookiecutter.project_name}}-tool = "src.{{ cookiecutter.project_name }}.__main__.main"
+
+[tool.setuptools]
+packages = ["{{ cookiecutter.project_name }}"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+{{ cookiecutter.project_name }} = [
+    "*.json",
+    ]
