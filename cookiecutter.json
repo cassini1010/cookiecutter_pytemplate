@@ -1,7 +1,8 @@
 {
     "author_name": "joy vinter",
     "author_email": "joy.vinter@domain.com",
-    "project_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_name": "Boilerplate template",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python project",
     "version": "1.0.0"
 }
